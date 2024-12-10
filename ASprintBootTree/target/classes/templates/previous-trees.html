@@ -1,0 +1,31 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head><title>Previous Trees</title></head>-->
+<!--<body>-->
+<!--<h1>Previous Trees</h1>-->
+<!--<ul>-->
+<!--    <th:block th:each="tree : ${trees}">-->
+<!--        <li>-->
+<!--            <p>Numbers: <span th:text="${tree.inputNumbers}"></span></p>-->
+<!--            <p>Tree JSON: <span th:text="${tree.treeStructure}"></span></p>-->
+<!--        </li>-->
+<!--    </th:block>-->
+<!--</ul>-->
+<!--<a href="/enter-numbers">Back</a>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Previous Trees</title>
+</head>
+<body>
+    <h1>Previous Trees</h1>
+    <ul>
+        <li th:each="tree : ${trees}">
+            <pre th:text="${tree.treeJson}"></pre>
+        </li>
+    </ul>
+    <a href="/enter-numbers">Enter more numbers</a>
+</body>
+</html>
